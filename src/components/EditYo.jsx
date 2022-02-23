@@ -2,7 +2,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 
 const EditYo = (props) => {
-  const { register, errors, handleSubmit, setValue } = useForm({
+  const { register, formState: { errors }, handleSubmit, setValue } = useForm({
     defaultValues: props.currentUser,
   });
 
